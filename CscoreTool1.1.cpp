@@ -343,7 +343,7 @@ int readVLWindow(const string& ifname, vector<VLW>& vlws)
 	while (!fin.eof())
 	{
 		getline(fin,s);
-		if (s==""||s.substr(0,3)!="chr") continue;
+		if (s==""||s.substr(0,1)=="#") continue;
 		vector<string> vs;
 		parseStr(s,'\t',vs);
 		if (vs.size()<3) continue;
